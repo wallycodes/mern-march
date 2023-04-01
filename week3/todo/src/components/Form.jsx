@@ -1,14 +1,40 @@
 import React,{useState} from "react";
 
-const Form = ()=>{
+const Form = (props)=>{
+
+    // setup variables to keep track of state/task using props getter/setter
+    const {taskList, setTaskList} = props
+
+    // set variables for todo list this would be for inputs in our form 
+    const [task, setTask] = useState({
+        taskToDo:'',
+        taskCompleted:false
+    })
+
+
+    const changeHandler = (e) =>{
+        setTask({...task, [e.target.name]:e.target.value})
+        console.log(e)
+    }
+
+    const submitHandler = (e) =>{
+        e.preventDefault()
+        setTaskList([...taskList, task])
+        setTask({
+            taskToDo:'',
+            taskCompleted:false
+        })
+    }
+    
+
     return(
         <div className="container">
             <div className="row">
                 <div className="col ">
-                <form>
+                <form onSubmit={submitHandler}>
                     <div class="mt-5 mb-3 w-50 mx-auto">
                         <h1 for="exampleInputEmail1" class="form-label">ToDo List</h1>
-                        <input placeholder="What needs to be done?" type="text" class="form-control" aria-describedby="emailHelp"/>
+                        <input value={task.taskToDo} placeholder="What needs to be done?" onChange={changeHandler} name="taskToDo" type="text" class="form-control"/>
                         {/* <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> */}
                     </div>
                     

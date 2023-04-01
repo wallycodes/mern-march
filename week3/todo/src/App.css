@@ -1,6 +1,13 @@
 .App {
   text-align: center;
 }
+.line-through{
+  text-decoration: line-through;
+}
+.cardDisplay{
+  width: 18rem;
+  padding: 20px;
+}
 
 .App-logo {
   height: 40vmin;
