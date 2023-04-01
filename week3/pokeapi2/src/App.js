@@ -1,14 +1,14 @@
 import {useState, useEffect} from 'react';
 import axios from 'axios';
 import './App.css';
-import Form from './components/Form';
+
 
 function App() {
   const [pokemonChar, setPokemonChar] = useState([])
 
   // Here we have everything to use API
   useEffect(() => {
-    axios.get('https://pokeapi.co/api/v2/pokemon/')
+    axios.get('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0')
     .then((response) =>{
       // console.log('RESPONSE');
       // console.log(response);
@@ -22,9 +22,9 @@ function App() {
   return (
     <div className="App">
       {
-        pokemonChar.map((pokemon)=>(
-          <div>
-            <h2>Pokemon{pokemon.name}</h2>
+        pokemonChar.map((pokemon, idx)=>(
+          <div key={idx}>
+            <li>{pokemon.name}</li>
           </div>
         ))
       }
