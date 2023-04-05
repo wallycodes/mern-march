@@ -1,0 +1,33 @@
+Here is the git shorthand command to make multiple folders and then also make
+ files in those corresponding folders:
+
+mkdir folderName && touch folderName/file-name
+
+makes it possible to create the entire server folder in one line
+
+const TvShow = new mongoose.Schema({})
+
+const TvShow is the instance
+new refers to a Class
+mongoose is the Class
+Schema is the method
+
+(Cross-Origin Resource Sharing) mechanism that allows servers to specify which origins 
+(i.e., domains) are allowed to access resources on the server 
+
+
+the routes connect us to the controller where our mongodb queries live, and the model
+ connects to the controller to define the data we want
+
+
+Hey Wally! Not sure if this was resolved for you yesterday, I would have gotten back to ya but I was off so I am just seeing this. 
+
+The best way to visualize it is to follow the flow of data:
+1. You pass in an individual task from the event listener (onClick), and into the function call itself. onClick={() => deleteHandler(task)}
+2. The deleteHandler function receives this task from the map
+3. Now we invoke the filter method
+4. The filter method takes the original taskList from props (outside map) and simply compares itself to the task from the map.
+5. We say any other task that is not equal to the taskFromMap, we will keep. And the one we pressed will delete.
+6. Lastly we setTaskList to the new value that does NOT include the task from the map that we clicked delete on.
+
+Hope this helps

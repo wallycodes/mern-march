@@ -14,7 +14,7 @@ const Form = (props)=>{
 
     const changeHandler = (e) =>{
         setTask({...task, [e.target.name]:e.target.value})
-        console.log(e)
+        // console.log(e)
     }
 
     const submitHandler = (e) =>{
