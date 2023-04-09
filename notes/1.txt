@@ -20,6 +20,7 @@ the routes connect us to the controller where our mongodb queries live, and the 
  connects to the controller to define the data we want
 
 
+THIS IS THE DELETE FUNCTION ON TODOLIST
 Hey Wally! Not sure if this was resolved for you yesterday, I would have gotten back to ya but I was off so I am just seeing this. 
 
 The best way to visualize it is to follow the flow of data:
@@ -31,3 +32,6 @@ The best way to visualize it is to follow the flow of data:
 6. Lastly we setTaskList to the new value that does NOT include the task from the map that we clicked delete on.
 
 Hope this helps
+
+
+YES, what Anthony said!!! your postman wont work if you don't nodemon server.js into it
