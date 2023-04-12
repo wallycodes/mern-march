@@ -35,3 +35,6 @@ Hope this helps
 
 
 YES, what Anthony said!!! your postman wont work if you don't nodemon server.js into it
+
+
+axios allows us to communicate with our database by using the same method as in our routes file as well as the same route

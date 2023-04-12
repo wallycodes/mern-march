@@ -8,3 +8,5 @@ module.exports = app =>{
     app.delete('/api/deleteJoke/:id', JokeController.deleteJoke);
 
 }
+
+
