@@ -1,0 +1,18 @@
+-Setup forms etc
+
+- set up a const for getters and setters with useState (import useState)
+- setup the prperties of the object
+- setup changehandler so we can store the info into useState
+- add these handlers to form onChange={changeHandler}
+- add the value of the input forms value={show.title}
+
+- pass props in as a parameter to the 'Form' variable so we can use the form info in our App.js,
+remember that info gets passed from parent to child (componmenet to App.js)
+
+
+
+
+
+Wally, for sure!! There are so many dependencies to keep track of: 
+server: mongoose, cors, express, nodemon
+client: axios, react-router-dom

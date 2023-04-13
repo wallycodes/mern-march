@@ -4,7 +4,7 @@ import React, { useState } from "react";
 const Form = (props) =>{
     // const [showList, setShowList] = useState([]) have to lift state, moved to app.js
     // console.log(props);
-    const {showList, setShowList} = props
+    
 
     const [show, setShow] = useState({
         title:'',
@@ -23,6 +23,8 @@ const Form = (props) =>{
         }
         
     }
+
+    const {showList, setShowList} = props
 
     const submitHandler = (e) =>{
         e.preventDefault()
