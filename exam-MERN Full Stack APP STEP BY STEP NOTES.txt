@@ -9,6 +9,12 @@
 - pass props in as a parameter to the 'Form' variable so we can use the form info in our App.js,
 remember that info gets passed from parent to child (componmenet to App.js)
 
+Backend
+-create/copy folder structure
+-change the config file, change the name of the DB, new name will create new one automatically
+-change names of all files to match (make sure routes to files are changed
+-change const in server.js file to new const
+
 
 
 
