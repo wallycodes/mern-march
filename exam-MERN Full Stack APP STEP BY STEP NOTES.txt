@@ -16,3 +16,27 @@ remember that info gets passed from parent to child (componmenet to App.js)
 Wally, for sure!! There are so many dependencies to keep track of: 
 server: mongoose, cors, express, nodemon
 client: axios, react-router-dom
+
+
+
+here are your status codes again if y'all need them. I also pinned them to the Discord chat thanks to Mayur posting them there
+
+// 1xx (Informational): The request was received and the server is continuing to process it.
+// 2xx (Successful): The request was successfully received, understood, and accepted.
+// 3xx (Redirection): The server is redirecting the client to a different resource.
+// 4xx (Client Error): The request contains bad syntax or cannot be fulfilled by the server.
+// 5xx (Server Error): The server failed to fulfill a valid request.
+
+// MOST COMMON
+// 200 OK: The request was successful, and the server has returned the requested data.
+// 201 Created: The server has successfully created a new resource as a result of the request.
+// 204 No Content: The server has successfully processed the request but there is no content to return.
+// 301 Moved Permanently: The requested resource has been moved to a new location permanently.
+// 304 Not Modified: The requested resource has not been modified since the last request.
+// 400 Bad Request: The request was malformed or invalid in some way.
+// 401 Unauthorized: The request requires authentication or the authentication failed.
+// 403 Forbidden: The server understood the request, but is refusing to fulfill it.
+// 404 Not Found: The requested resource could not be found on the server.
+// 500 Internal Server Error: The server encountered an error while processing the request.
+// 503 Service Unavailable: The server is currently unable to handle the request due to a temporary overload or maintenance of the server.
+here are your status codes again if y'all need them. I also pinned them to the Discord chat thanks to Mayur posting them there
