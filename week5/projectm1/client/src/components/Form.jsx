@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import axios from 'axios'
 
 
 const Form = (props) =>{
@@ -18,14 +19,20 @@ const Form = (props) =>{
 
     const submitHandler = (e) =>{
         e.preventDefault()
-        
-            setProjectList([...projectList, project])
-            setProject({
-            title:'',
-            price:'',
-            description:'',
-            projectCompleted:false
+            axios.post('http://localhost:8000/api/newProjects', project)
+            .then((res) =>{
+                console.log(res)
             })
+            .catch((err) =>{
+                console.log(err)
+            })
+            // setProjectList([...projectList, project])
+            // setProject({
+            // title:'',
+            // price:'',
+            // description:'',
+            // projectCompleted:false
+            // })
     }
     
     return(

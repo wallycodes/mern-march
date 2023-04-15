@@ -9,12 +9,26 @@
 - pass props in as a parameter to the 'Form' variable so we can use the form info in our App.js,
 remember that info gets passed from parent to child (componmenet to App.js)
 
+SETUP BACKEND FIRST
 Backend
 -create/copy folder structure
 -change the config file, change the name of the DB, new name will create new one automatically
+-install mongoose and express
 -change names of all files to match (make sure routes to files are changed
 -change const in server.js file to new const
+-change all names
 
+-install axios on client folder so we can make api calls to our own server/api (npm i axios)
+
+-install cors on server folder (npm i cors) (must install to communicate with client across different ports) make sure to import it on the server.js
+const cors = require('cors');
+app.use(cors());
+
+-run server with 'nodemon server.js' run client 'npm start'
+-import axios into App.js and useEffect
+
+-create displayt page and move the useEffect from the App.js that has the whole list into display page, then get DB info to display
+-install 'npm i react-router-dom' on client folder
 
 
 
@@ -46,3 +60,9 @@ here are your status codes again if y'all need them. I also pinned them to the D
 // 500 Internal Server Error: The server encountered an error while processing the request.
 // 503 Service Unavailable: The server is currently unable to handle the request due to a temporary overload or maintenance of the server.
 here are your status codes again if y'all need them. I also pinned them to the Discord chat thanks to Mayur posting them there
+
+useState is like a bucket that holds data. It also allows us to update the data in the bucket.
+useEffect is like our very own butler. If we want our "dinner" ready for us the second we walk
+ in the door, we can create a useEffect hook to have data ready for us the second we go to that
+ component. useEffect is commonly used to call an axios api, and that way the api call is already
+ done the second we get there.

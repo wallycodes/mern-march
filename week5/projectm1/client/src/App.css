@@ -11,6 +11,21 @@
   margin-top: 100px;
   padding: 30px 50px;
 }
+.centerMe{
+  margin-top: 100px;
+  
+}
+.titleFont{
+  color: #fff;
+  font-size: 40px;
+  padding-bottom: 30px;
+}
+.displayCards{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+}
 
 label{
   display: flex;
