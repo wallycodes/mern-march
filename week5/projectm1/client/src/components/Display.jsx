@@ -6,12 +6,12 @@ import axios from 'axios';
 
 
 const Display = (props) =>{
-    const {projectList, setProjectList} = props;
+    const {productList, setProductList} = props;
 
     useEffect(()=> {
-        axios.get('http://localhost:8000/api/allProjects')
+        axios.get('http://localhost:8000/api/allProducts')
         .then((response) => {
-          setProjectList(response.data.projects)
+          setProductList(response.data.product)
         })
         .catch((err) => {
           console.log(err);
@@ -19,17 +19,17 @@ const Display = (props) =>{
       },[])
     return(
         <div className='centerMe'>
-            <h2 className='titleFont'>All Our Projects</h2>
+            <h2 className='titleFont'>All Our Products</h2>
             <div className='displayCards'>
             
             {
-                projectList.map((project) =>(
+                productList.map((product) =>(
                     
                     <div class="card mx-auto" style={{maxWidth: "18rem"}}>
-                        <div key={project._id} class="card-body">
-                        <h5 class="card-title">Title: {project.title}</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Price: {project.price}</h6>
-                        <p class="card-text">Description: {project.description}</p>
+                        <div key={product._id} class="card-body">
+                        <h5 class="card-title">Title: {product.title}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Price: {product.price}</h6>
+                        <p class="card-text">Description: {product.description}</p>
                         <a href="#" class="card-link">Edit</a>
                         <a href="#" class="card-link">Delete</a>
                         </div>

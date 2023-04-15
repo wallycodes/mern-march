@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 
 //only need to change the name of the database at the end of the URL, keep rest of code the same
-mongoose.connect('mongodb://127.0.0.1:27017/Projects', {
+mongoose.connect('mongodb://127.0.0.1:27017/Products', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })

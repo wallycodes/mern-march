@@ -7,20 +7,21 @@ import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
 
 
 function App(props) {
-  const [projectList, setProjectList] = useState([])
+  const [productList, setProductList] = useState([])
 
   return (
     <div className="App">
       
       <BrowserRouter>
 
-      <Link to={'/createProject/form'}>Add a Project</Link>
+      <Link to={'/createProduct/form'}>Add a Product</Link>
       <br/>
       <Link to={'/'}>Home</Link>
+      
 
         <Routes>
-          <Route path='/' element={<Display setProjectList={setProjectList} projectList={projectList}/>}/>
-          <Route path='/createProject/form' element={<Form projectList={projectList} setProjectList={setProjectList}/>}/>
+          <Route path='/' element={<Display setProductList={setProductList} productList={productList}/>}/>
+          <Route path='/createProduct/form' element={<Form productList={productList} setProductList={setProductList}/>}/>
         </Routes>
         
         

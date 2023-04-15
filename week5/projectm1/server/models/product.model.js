@@ -2,7 +2,7 @@
 
 const mongoose = require('mongoose');
  
-const OneProject = new mongoose.Schema({
+const OneProduct = new mongoose.Schema({
     title: {
         type: String,
         required:[true, 'Title is required'],
@@ -23,6 +23,6 @@ const OneProject = new mongoose.Schema({
 }, {timestamps:true});
  
 // creates model that we can interact with, model is created off the schema blueprint, which is above
-const Project = mongoose.model('Project', OneProject);
+const Product = mongoose.model('Product', OneProduct);
  
-module.exports = Project;
+module.exports = Product;

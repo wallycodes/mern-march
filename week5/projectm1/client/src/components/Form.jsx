@@ -4,22 +4,22 @@ import axios from 'axios'
 
 const Form = (props) =>{
     
-    const [project, setProject] = useState({
+    const [product, setProduct] = useState({
         title:'',
         price:'',
         description:'',
-        projectCompleted:false
+        productCompleted:false
     })
 
     const changeHandler = (e) =>{
-        setProject({...project, [e.target.name]:e.target.value})
+        setProduct({...product, [e.target.name]:e.target.value})
     }
     
-    const {projectList, setProjectList} = props
+    const {productList, setProductList} = props
 
     const submitHandler = (e) =>{
         e.preventDefault()
-            axios.post('http://localhost:8000/api/newProjects', project)
+            axios.post('http://localhost:8000/api/newProducts', product)
             .then((res) =>{
                 console.log(res)
             })
@@ -40,18 +40,18 @@ const Form = (props) =>{
                 <div className="container formStyle">
                     <div className="row">
                         <form className="show-form mx-auto" onSubmit={submitHandler}>
-                            <h1 style={{padding:"50px;"}}>Project Management 1</h1>
+                            <h1 style={{padding:"50px;"}}>Product Management 1</h1>
                             <div class="mb-3">
                                 <label align="left" class="form-label">Title</label>
-                                <input type="text" name="title" class="form-control" onChange={changeHandler} value={project.title}/>
+                                <input type="text" name="title" class="form-control" onChange={changeHandler} value={product.title}/>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Price</label>
-                                <input type="text" name="price" class="form-control" onChange={changeHandler} value={project.price}/>
+                                <input type="text" name="price" class="form-control" onChange={changeHandler} value={product.price}/>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Description</label>
-                                <input type="text" name="description" class="form-control" onChange={changeHandler} value={project.description}/>
+                                <input type="text" name="description" class="form-control" onChange={changeHandler} value={product.description}/>
                             </div>
                             <div class="mb-3 pt-4">
                                 <button type="submit" className="btn-primary btn-lg">Create</button>

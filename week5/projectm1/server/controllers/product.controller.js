@@ -1,11 +1,11 @@
 //funstions that connect to our routes
 
-const Project = require('../models/project.model');
+const Product = require('../models/product.model');
 
-module.exports.findAllProjects = (req, res) => {
-    Project.find()
-        .then((allProjects) => {
-            res.json({ projects: allProjects })
+module.exports.findAllProducts = (req, res) => {
+    Product.find()
+        .then((allProducts) => {
+            res.json({ products: allProducts })
             // or you can just return allshows in the object
         })
         .catch((err) => {
@@ -13,10 +13,10 @@ module.exports.findAllProjects = (req, res) => {
         });
 }
 
-module.exports.createProjects =(req,res) =>{
-    Project.create(req.body)
-        .then ((newProject) =>{
-            res.json({project: newProject})
+module.exports.createProducts =(req,res) =>{
+    Product.create(req.body)
+        .then ((newProduct) =>{
+            res.json({product: newProduct})
         })
         .catch((err) => {
             res.json({ message: 'Something went wrong', error: err })
