@@ -11,8 +11,10 @@ const OneProduct = new mongoose.Schema({
     },
     price: {
         type: Number,
-        min:[1, 'Must cost atleast $1.00']
-        
+        min: [2, 'Price is too low'],
+        max: 50,
+        required: [true, 'Price is required']
+
     },
     description: {
         type: String,
