@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {useEffect} from 'react';
 import axios from 'axios';
+import {Link} from 'react-router-dom'
 
 
 
@@ -30,8 +31,9 @@ const Display = (props) =>{
                         <h5 class="card-title">Title: {product.title}</h5>
                         <h6 class="card-subtitle mb-2 text-muted">Price: {product.price}</h6>
                         <p class="card-text">Description: {product.description}</p>
-                        <a href="#" class="card-link">Edit</a>
-                        <a href="#" class="card-link">Delete</a>
+                        <Link to={`/viewProduct/${product._id}`}>View</Link>                        
+                        <Link to={`/editProduct/${product._id}`}>Edit</Link>
+                        <Link to={`/deleteProduct/${product._id}`}>Delete</Link>
                         </div>
                   </div>
                 ))

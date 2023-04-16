@@ -19,22 +19,22 @@ module.exports.createProducts =(req,res) =>{
             res.json({product: newProduct})
         })
         .catch((err) => {
-            res.json({ message: 'Something went wrong', error: err })
+            res.status(400).json(err)
         });
 }
 
-// module.exports.findOneShow = (req, res) =>{
-//     console.log(req.params)
-//     //req.params.id the "id" cannot be changed to another name here and in the routes section, must be same. 
-//     //params is an object
-//     Show.findOne({_id: req.params.id})
-//         .then((oneShow)=>{
-//             res.json({show:oneShow})
-//         })
-//         .catch((err) => {
-//             res.json({ message: 'Something went wrong', error: err })
-//         });
-// }
+module.exports.findOneProduct = (req, res) =>{
+    // console.log(req.params)
+    //req.params.id the "id" cannot be changed to another name here and in the routes section, must be same. 
+    //params is an object
+    Product.findOne({_id: req.params.id})
+        .then((oneProduct)=>{
+            res.json({product:oneProduct})
+        })
+        .catch((err) => {
+            res.json({ message: 'Something went wrong', error: err })
+        });
+}
 
 // module.exports.updateShow = (req, res) =>{
 //     Show.findOneAndUpdate({_id: req.params.id},

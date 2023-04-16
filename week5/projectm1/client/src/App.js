@@ -14,9 +14,9 @@ function App(props) {
       
       <BrowserRouter>
 
-      <Link to={'/createProduct/form'}>Add a Product</Link>
+      <Link style={{color:"#fff",fontSize:"35px"}} to={'/createProduct/form'}>Add a Product</Link>
       <br/>
-      <Link to={'/'}>Home</Link>
+      <Link style={{color:"#fff",fontSize:"35px"}} to={'/'}>Home</Link>
       
 
         <Routes>
