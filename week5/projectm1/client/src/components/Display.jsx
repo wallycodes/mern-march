@@ -11,7 +11,7 @@ const Display = (props) =>{
     useEffect(()=> {
         axios.get('http://localhost:8000/api/allProducts')
         .then((response) => {
-          setProductList(response.data.product)
+          setProductList(response.data.products)
         })
         .catch((err) => {
           console.log(err);
@@ -23,10 +23,10 @@ const Display = (props) =>{
             <div className='displayCards'>
             
             {
-                productList.map((product) =>(
+                productList.map((product,idx) =>(
                     
-                    <div class="card mx-auto" style={{maxWidth: "18rem"}}>
-                        <div key={product._id} class="card-body">
+                    <div key={idx} class="card mx-auto" style={{maxWidth: "18rem"}}>
+                        <div class="card-body">
                         <h5 class="card-title">Title: {product.title}</h5>
                         <h6 class="card-subtitle mb-2 text-muted">Price: {product.price}</h6>
                         <p class="card-text">Description: {product.description}</p>
@@ -39,7 +39,7 @@ const Display = (props) =>{
         </div>
         </div>
         
-    )
+    );
 }
 
 export default Display
