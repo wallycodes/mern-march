@@ -4,6 +4,7 @@ import { useState, useEffect} from 'react';
 import axios from 'axios';
 import Display from './components/Display';
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
+import OneProduct from './components/OneProduct';
 
 
 function App(props) {
@@ -22,6 +23,7 @@ function App(props) {
         <Routes>
           <Route path='/' element={<Display setProductList={setProductList} productList={productList}/>}/>
           <Route path='/createProduct/form' element={<Form productList={productList} setProductList={setProductList}/>}/>
+          <Route path='/viewProduct/:id' element={<OneProduct/>}/>
         </Routes>
         
         

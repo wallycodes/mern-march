@@ -26,14 +26,14 @@ const Display = (props) =>{
             {
                 productList.map((product,idx) =>(
                     
-                    <div key={idx} class="card mx-auto" style={{maxWidth: "18rem"}}>
-                        <div class="card-body">
-                        <h5 class="card-title">Title: {product.title}</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Price: {product.price}</h6>
-                        <p class="card-text">Description: {product.description}</p>
-                        <Link to={`/viewProduct/${product._id}`}>View</Link>                        
-                        <Link to={`/editProduct/${product._id}`}>Edit</Link>
-                        <Link to={`/deleteProduct/${product._id}`}>Delete</Link>
+                    <div key={idx} className="card mx-auto" style={{maxWidth: "18rem"}}>
+                        <div className="card-body">
+                        <h5 className="card-title">Title: {product.title}</h5>
+                        <h6 className="card-subtitle mb-2 text-muted">Price: {product.price}</h6>
+                        <p className="card-text">Description: {product.description}</p>
+                        <Link style={{padding:"5px"}} to={`/viewProduct/${product._id}`}>View</Link>                        
+                        <Link style={{padding:"5px"}} to={`/editProduct/${product._id}`}>Edit</Link>
+                        <Link style={{padding:"5px"}} to={`/deleteProduct/${product._id}`}>Delete</Link>
                         </div>
                   </div>
                 ))

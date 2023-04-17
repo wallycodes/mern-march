@@ -5,6 +5,7 @@ import {useNavigate} from 'react-router-dom'
 
 const Form = (props) =>{
     const navigate = useNavigate();
+
     const [product, setProduct] = useState({
         title:'',
         price:'',
@@ -24,6 +25,7 @@ const Form = (props) =>{
             axios.post('http://localhost:8000/api/newProducts', product)
             .then((res) =>{
                 console.log(res)
+                navigate('/')
             })
             .catch((err) =>{
                 // console.log(err.response.data.errors)
