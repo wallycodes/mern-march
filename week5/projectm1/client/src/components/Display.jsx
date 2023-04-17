@@ -18,6 +18,19 @@ const Display = (props) =>{
           console.log(err);
         })
       },[])
+
+      const deleteHandler = (id) =>{
+        console.log(id)
+        axios.delete(`http://localhost:8000/api/deleteProduct/${id}`)
+          .then((res)=>{
+            // console.log(res)
+            const updatedProductList = productList.filter((product) => product._id !== id)
+            setProductList(updatedProductList)
+          })
+          .catch((err) =>{
+            console.log(err)
+          })
+      }
     return(
         <div className='centerMe container'>
             <h2 className='titleFont'>All Our Products</h2>
@@ -33,7 +46,7 @@ const Display = (props) =>{
                           <p className="card-text">Description: {product.description}</p>
                           <Link style={{padding:"5px"}} to={`/viewProduct/${product._id}`}>View</Link>                        
                           <Link style={{padding:"5px"}} to={`/updateProduct/${product._id}`}>Edit</Link>
-                          <Link style={{padding:"5px"}} to={`/deleteProduct/${product._id}`}>Delete</Link>
+                          <Link style={{padding:"5px"}} onClick={() => deleteHandler(product._id)}>Delete</Link>
                         </div>
                   </div>
                 ))
