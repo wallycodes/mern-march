@@ -36,18 +36,18 @@ module.exports.findOneProduct = (req, res) =>{
         });
 }
 
-// module.exports.updateShow = (req, res) =>{
-//     Show.findOneAndUpdate({_id: req.params.id},
-//         req.body,
-//         {new:true, runValidators:true}
-//         ) 
-//         .then((updatedShow) => {
-//             res.json({show:updatedShow})
-//         })
-//         .catch((err) => {
-//             res.json({ message: 'Something went wrong', error: err })
-//         });
-// }
+module.exports.updateProduct = (req, res) =>{
+    Product.findOneAndUpdate({_id: req.params.id},
+        req.body,
+        {new:true, runValidators:true}
+        ) 
+        .then((updatedProduct) => {
+            res.json({show:updatedProduct})
+        })
+        .catch((err) => {
+            res.json({ message: 'Something went wrong', error: err })
+        });
+}
 
 // module.exports.deleteShow = (req,res) =>{
 //     Show.deleteOne({_id:req.params.id})

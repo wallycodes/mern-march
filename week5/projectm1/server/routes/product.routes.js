@@ -5,7 +5,7 @@ module.exports = app => {
     app.get('/api/allProducts', ProductController.findAllProducts);
     app.post('/api/newProducts', ProductController.createProducts);
     app.get('/api/oneProduct/:id', ProductController.findOneProduct);
-    // app.put('/api/updateShow/:id', TvShowController.updateShow);
+    app.put('/api/updateProduct/:id', ProductController.updateProduct);
     // app.delete('/api/deleteShow/:id', TvShowController.deleteShow);
 } 
 
